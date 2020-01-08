@@ -1,17 +1,24 @@
 <template>
+    <v-container>
 
-<v-app-bar
-        app
-        color="blue"
-        dark
->
+    <HeaderView/>
+    <FooterView/>
 
-</v-app-bar>
+    </v-container>
+
 </template>
 
 
 <script>
+    import HeaderView from "../components/HeaderView";
+    import FooterView from "../components/FooterView";
+
     export default {
-        name: 'Account'
+        name: 'Account',
+
+        components: {
+            HeaderView,
+            FooterView
+        },
     }
 </script>
