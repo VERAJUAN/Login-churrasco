@@ -37,7 +37,7 @@ router.beforeEach((to, from, next) => {
   }
 });
 router.beforeEach((to, from, next) => {
-  if (to.path == '/login' && sessionStorage.length > 0) {
+  if (to.path != '/account' && sessionStorage.length > 0) {
     next({
       path: '/account'
     });

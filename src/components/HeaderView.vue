@@ -6,12 +6,13 @@
             dark
     >
         <v-row>
-    <v-col
-    cols="4"
-    class="justify-end">
-        {{ email }} | <a @click="logout" class="white--text">Cerrar sesión</a>
-    </v-col>
-</v-row>
+            <v-col
+                    cols="12"
+                    md="4"
+                    class="offset-md-8">
+                {{ email }} | <a @click="logout" class="white--text">Cerrar sesión</a>
+            </v-col>
+        </v-row>
 
     </v-app-bar>
 
@@ -20,15 +21,15 @@
 <script>
     export default {
         name: 'HeaderView',
-        data(){
-            return{
+        data() {
+            return {
                 email: sessionStorage.Email
             }
         },
         methods: {
-            logout(){
+            logout() {
                 sessionStorage.clear();
-                this.$router.push({ name: 'login' });
+                this.$router.push({name: 'login'});
             }
         }
     }
